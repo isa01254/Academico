@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Acadêmico - Matrículas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>.nav-link { color: white !important; }</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <a class="navbar-brand" href="/">Portal Acadêmico</a>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item active"><a class="nav-link" href="/matriculas/">Matrículas</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-success">Gerenciar Matrículas (RF08)</h2>
+        <a href="/admin/app/matricula/add/" class="btn btn-success">Nova Matrícula</a>
+    </div>
+
+    <div class="table-responsive shadow-sm">
+        <table class="table table-striped border">
+            <thead class="bg-success text-white">
+                <tr>
+                    <th>Aluno</th>
+                    <th>Curso</th>
+                    <th>Turma</th>
+                    <th>Data Início</th>
+                    <th>Previsão Término</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for matricula in matriculas %}
+                <tr>
+                    <td class="font-weight-bold">{{ matricula.pessoa.nome }}</td>
+                    <td>{{ matricula.curso.nome }}</td>
+                    <td>{{ matricula.turma.nome|default:"-" }}</td>
+                    <td>{{ matricula.data_inicio|date:"d/m/Y" }}</td>
+                    <td>{{ matricula.data_previsao_termino|date:"d/m/Y" }}</td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="5" class="text-center py-4">Nenhuma matrícula registrada.</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="mt-4">
+        <a href="/" class="btn btn-outline-secondary">Voltar para Home</a>
+    </div>
+</div>
+</body>
+</html>

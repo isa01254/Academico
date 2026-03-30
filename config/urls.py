@@ -20,4 +20,11 @@ from app.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', IndexView.as_view(), name='index'),
+    path('pessoas/', lista_pessoas, name='lista_pessoas'),
+    path('cursos/', lista_cursos, name='lista_cursos'),
+    path('disciplinas/', lista_disciplinas, name='lista_disciplinas'),
+    path('turmas/', lista_turmas, name='lista_turmas'),
+    path('matriculas/', lista_matriculas, name='lista_matriculas'),
+    path('cidades/', lista_cidades, name='lista_cidades'),
 ]

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Acadêmico - Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .nav-link { color: white !important; }
+        .nav-link:hover { color: #d4d4d4 !important; }
+        .card-link { text-decoration: none; color: inherit; }
+        .card-link:hover .card { transform: scale(1.02); transition: 0.3s; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <a class="navbar-brand" href="/">Portal Acadêmico</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/pessoas/">Pessoas</a></li>
+            <li class="nav-item"><a class="nav-link" href="/cursos/">Cursos</a></li>
+            <li class="nav-item"><a class="nav-link" href="/disciplinas/">Disciplinas</a></li>
+            <li class="nav-item"><a class="nav-link" href="/turmas/">Turmas</a></li>
+            <li class="nav-item"><a class="nav-link" href="/matriculas/">Matrículas</a></li>
+            <li class="nav-item"><a class="nav-link" href="/cidades/">Cidades</a></li>
+            <li class="nav-item"><a class="nav-link font-weight-bold" href="/admin/">Administração</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Bem-vindo ao Sistema Acadêmico</h1>
+        <p class="lead">Gestão completa de cursos, disciplinas e matrículas em um só lugar.</p>
+        <hr class="my-4">
+        <p>Utilize os cards abaixo ou o menu superior para navegar entre os módulos.</p>
+    </div>
+
+    <div class="row text-center mb-5">
+        <div class="col-md-4 mb-3">
+            <div class="card border-success">
+                <div class="card-body">
+                    <h5 class="card-title text-success">Cursos</h5>
+                    <p class="card-text">Gerencie a grade curricular e carga horária.</p>
+                    <a href="/cursos/" class="btn btn-outline-success">Ver Cursos</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card border-success">
+                <div class="card-body">
+                    <h5 class="card-title text-success">Alunos / Pessoas</h5>
+                    <p class="card-text">Cadastro de estudantes, professores e ocupações.</p>
+                    <a href="/pessoas/" class="btn btn-outline-success">Ver Pessoas</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card border-success">
+                <div class="card-body">
+                    <h5 class="card-title text-success">Matrículas</h5>
+                    <p class="card-text">Controle de entrada de alunos em turmas.</p>
+                    <a href="/matriculas/" class="btn btn-outline-success">Ver Matrículas</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

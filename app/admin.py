@@ -24,3 +24,15 @@ class CursoAdmin(admin.ModelAdmin):
 class CidadeInline(admin.TabularInline):
     model = Cidade
     extra = 3
+
+admin.site.register(Cidade)
+admin.site.register(Ocupacao)
+admin.site.register(Pessoa)
+admin.site.register(InstituicaoEnsino)
+admin.site.register(AreaSaber)
+admin.site.register(CursoDisciplina)
+admin.site.register(Turma)
+admin.site.register(Matricula)
+admin.site.register(AvaliacaoTipo)
+admin.site.register(Avaliacao)
+admin.site.register(Frequencia)
