@@ -3,69 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema Acadêmico - Home</title>
+    <title>Sistema Acadêmico</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        .nav-link { color: white !important; }
-        .nav-link:hover { color: #d4d4d4 !important; }
-        .card-link { text-decoration: none; color: inherit; }
-        .card-link:hover .card { transform: scale(1.02); transition: 0.3s; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+        
+        body { 
+            background-color: #f4f7f6; 
+            font-family: 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .navbar { 
+            background-color: #2c3e50 !important; 
+            border-bottom: 3px solid #ffc107;
+        }
+        .nav-link { 
+            color: #ecf0f1 !important; 
+            transition: 0.3s;
+        }
+        .nav-link:hover { 
+            color: #ffc107 !important; 
+        }
+
+        .jumbotron { 
+            background-color: #ffffff; 
+            border: 1px solid #dee2e6;
+            border-left: 10px solid #2c3e50;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .display-4 { 
+            color: #2c3e50; 
+            font-weight: bold;
+        }
+
+        .card { 
+            border: none; 
+            border-radius: 8px; 
+            transition: 0.3s; 
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+        }
+        .card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12); 
+        }
+        .card-title { 
+            color: #2c3e50; 
+            font-weight: 700;
+        }
+
+        .btn-custom {
+            background-color: #ffc107;
+            border: none;
+            color: #2c3e50;
+            font-weight: bold;
+            padding: 8px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn-custom:hover {
+            background-color: #e0a800;
+            color: #2c3e50;
+        }
     </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-success">
-    <a class="navbar-brand" href="/">Portal Acadêmico</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="/pessoas/">Pessoas</a></li>
-            <li class="nav-item"><a class="nav-link" href="/cursos/">Cursos</a></li>
-            <li class="nav-item"><a class="nav-link" href="/disciplinas/">Disciplinas</a></li>
-            <li class="nav-item"><a class="nav-link" href="/turmas/">Turmas</a></li>
-            <li class="nav-item"><a class="nav-link" href="/matriculas/">Matrículas</a></li>
-            <li class="nav-item"><a class="nav-link" href="/cidades/">Cidades</a></li>
-            <li class="nav-item"><a class="nav-link font-weight-bold" href="/admin/">Administração</a></li>
-        </ul>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand font-weight-bold" href="#">Portal Acadêmico</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/">Início</a></li>
+                <li class="nav-item"><a class="nav-link" href="/pessoas/">Pessoas</a></li>
+                <li class="nav-item"><a class="nav-link" href="/cursos/">Cursos</a></li>
+                <li class="nav-item"><a class="nav-link" href="/disciplinas/">Disciplinas</a></li>
+                <li class="nav-item "><a class="nav-link" href="/avaliacoes/">Avaliações</a></li>
+                <li class="nav-item "><a class="nav-link" href="/tipo_avaliacoe/">Tipos de Avaliações</a></li>
+                <li class="nav-item"><a class="nav-link" href="/turmas/">Turmas</a></li>
+                <li class="nav-item"><a class="nav-link" href="/matriculas/">Matrículas</a></li>
+                <li class="nav-item"><a class="nav-link" href="/cidades/">Cidades</a></li>
+                <li class="nav-item"><a class="nav-link" href="/disc_curso/">Disc. por Curso</a></li>
+                <li class="nav-item"><a class="nav-link" href="/frequencia/">Frequência</a></li>
+                <li class="nav-item"><a class="nav-link" href="/instituicao/">Instituição</a></li>
+                <li class="nav-item"><a class="nav-link" href="/ocorrencias/">Ocorrências</a></li>
+            </ul>
+        </div>
     </div>
 </nav>
 
 <div class="container mt-5">
-    <div class="jumbotron text-center">
+    <div class="jumbotron">
         <h1 class="display-4">Bem-vindo ao Sistema Acadêmico</h1>
         <p class="lead">Gestão completa de cursos, disciplinas e matrículas em um só lugar.</p>
-        <hr class="my-4">
-        <p>Utilize os cards abaixo ou o menu superior para navegar entre os módulos.</p>
+        <hr class="my-4" style="border-top: 1px solid #ffc107; width: 100px; margin-left: 0;">
+        <p class="text-muted">Utilize os cards abaixo ou o menu superior para navegar entre os módulos.</p>
     </div>
 
     <div class="row text-center mb-5">
         <div class="col-md-4 mb-3">
-            <div class="card border-success">
-                <div class="card-body">
-                    <h5 class="card-title text-success">Cursos</h5>
-                    <p class="card-text">Gerencie a grade curricular e carga horária.</p>
-                    <a href="/cursos/" class="btn btn-outline-success">Ver Cursos</a>
+            <div class="card h-100">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Cursos</h5>
+                    <p class="card-text text-muted">Gerencie a grade curricular e carga horária acadêmica.</p>
+                    <a href="/cursos/" class="btn btn-custom mt-auto">Ver Cursos</a>
                 </div>
             </div>
         </div>
+        
         <div class="col-md-4 mb-3">
-            <div class="card border-success">
-                <div class="card-body">
-                    <h5 class="card-title text-success">Alunos / Pessoas</h5>
-                    <p class="card-text">Cadastro de estudantes, professores e ocupações.</p>
-                    <a href="/pessoas/" class="btn btn-outline-success">Ver Pessoas</a>
+            <div class="card h-100">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Alunos / Pessoas</h5>
+                    <p class="card-text text-muted">Cadastro de estudantes, professores e ocupações.</p>
+                    <a href="/pessoas/" class="btn btn-custom mt-auto">Ver Pessoas</a>
                 </div>
             </div>
         </div>
+
         <div class="col-md-4 mb-3">
-            <div class="card border-success">
-                <div class="card-body">
-                    <h5 class="card-title text-success">Matrículas</h5>
-                    <p class="card-text">Controle de entrada de alunos em turmas.</p>
-                    <a href="/matriculas/" class="btn btn-outline-success">Ver Matrículas</a>
+            <div class="card h-100">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Matrículas</h5>
+                    <p class="card-text text-muted">Controle de entrada e enturmação de alunos.</p>
+                    <a href="/matriculas/" class="btn btn-custom mt-auto">Ver Matrículas</a>
                 </div>
             </div>
         </div>

@@ -156,3 +156,16 @@ class Frequencia(models.Model):
 
     def __str__(self):
         return f"Frequência de {self.pessoa.nome}"
+    
+class Ocorrencia(models.Model):
+    descricao = models.TextField(verbose_name="Descrição da Ocorrência")
+    data = models.DateField(auto_now_add=True, verbose_name="Data do Registro")
+    pessoa = models.ForeignKey(Pessoa, on_delete=models.CASCADE, verbose_name="Aluno/Pessoa")
+    disciplina = models.ForeignKey(Disciplina, on_delete=models.SET_NULL, null=True, blank=True, verbose_name="Disciplina Relacionada")
+
+    class Meta:
+        verbose_name = "Ocorrência"
+        verbose_name_plural = "Ocorrências"
+
+    def __str__(self):
+        return f"{self.pessoa.nome} - {self.data}"
